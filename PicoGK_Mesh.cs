@@ -149,6 +149,16 @@ namespace PicoGK
             return _nAddVertex(m_hThis, vec);
         }
 
+        /// <summary>
+        /// Remove an existing vertex from the mesh
+        /// </summary>
+        /// <param name="vec">The vertex to remove</param>
+        /// <returns>A bool to know if it as been deleted</returns>
+        public bool bRemoveVertex(in Vector3 vec)
+        {
+            return _bRemoveVertex(m_hThis, vec);
+        }
+
         public void AddVertices(    in  IEnumerable<Vector3> avecVertices,
                                     out int[] anVertexIndex)
         {
@@ -191,6 +201,16 @@ namespace PicoGK
         public int nAddTriangle(in Triangle t)
         {
             return _nAddTriangle(m_hThis, t);
+        }
+
+        /// <summary>
+        /// Remove a triangle from the mesh
+        /// </summary>
+        /// <param name="t">Triangle to remove from the mesh</param>
+        /// <returns>A bool that tell if the triangle has been deleted or not</returns>
+        public bool bRemoveTriangle(in Triangle t)
+        {
+            return _bRemoveTriangle(m_hThis, t);
         }
 
         //// <summary>

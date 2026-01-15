@@ -86,6 +86,10 @@ namespace PicoGK
         [DllImport(Config.strPicoGKLib, CallingConvention = CallingConvention.Cdecl, EntryPoint = "Mesh_nAddVertex")]
         private static extern int _nAddVertex(IntPtr hThis,
                                                 in Vector3 V);
+        
+        [DllImport(Config.strPicoGKLib, CallingConvention = CallingConvention.Cdecl, EntryPoint = "Mesh_bRemoveVertex")]
+        private static extern bool _bRemoveVertex(IntPtr hThis,
+                                                in Vector3 V);
 
         [DllImport(Config.strPicoGKLib, CallingConvention = CallingConvention.Cdecl, EntryPoint = "Mesh_nVertexCount")]
         private static extern int _nVertexCount(IntPtr hThis);
@@ -97,6 +101,10 @@ namespace PicoGK
 
         [DllImport(Config.strPicoGKLib, CallingConvention = CallingConvention.Cdecl, EntryPoint = "Mesh_nAddTriangle")]
         private static extern int _nAddTriangle(IntPtr hThis,
+                                                    in Triangle T);
+
+        [DllImport(Config.strPicoGKLib, CallingConvention = CallingConvention.Cdecl, EntryPoint = "Mesh_bRemoveTriangle")]
+        private static extern bool _bRemoveTriangle(IntPtr hThis,
                                                     in Triangle T);
 
         [DllImport(Config.strPicoGKLib, CallingConvention = CallingConvention.Cdecl, EntryPoint = "Mesh_nTriangleCount")]
