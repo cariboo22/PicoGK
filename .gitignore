@@ -500,3 +500,6 @@ xcuserdata/
 *.out
 *.app
 
+# Others
+*.sh
+
